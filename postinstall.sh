@@ -16,9 +16,9 @@ echo "unclutter &" | sudo tee -a ~/.xinitrc > dev/null
 
 
 cp ~/.config/lxsession/LXDE-pi/autostart ~/.config/lxsession/LXDE-pi/autostart.bak
-echo "@xset s noblank" > ~/.config/lxsession/LXDE-pi/autostart
-echo "@xset s off" > ~/.config/lxsession/LXDE-pi/autostart
-echo "@xset -dpms" > ~/.config/lxsession/LXDE-pi/autostart
+echo "@xset s noblank" >> ~/.config/lxsession/LXDE-pi/autostart
+echo "@xset s off" >> ~/.config/lxsession/LXDE-pi/autostart
+echo "@xset -dpms" >> ~/.config/lxsession/LXDE-pi/autostart
 
 pm2 startup
 env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
