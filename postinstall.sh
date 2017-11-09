@@ -3,8 +3,8 @@
 sudo cp /boot/config.txt /boot/config.txt.bak
 
 echo "" | sudo tee -a /boot/config.txt > dev/null
-echo "display_rotate=1" | sudo tee -a /boot/config.txt > dev/null
-echo "avoid_warnings=1" | sudo tee -a /boot/config.txt > dev/null
+echo "display_rotate=1" | sudo tee -a /boot/config.txt > /dev/null
+echo "avoid_warnings=1" | sudo tee -a /boot/config.txt > /dev/null
 
 sudo apt-get install unclutter
 
@@ -12,7 +12,7 @@ cd ~
 touch .xinitrc
 cp .xinitrc .initrc.bak
 
-echo "unclutter &" | sudo tee -a ~/.xinitrc > dev/null
+echo "unclutter &" | sudo tee -a ~/.xinitrc > /dev/null
 
 
 cp ~/.config/lxsession/LXDE-pi/autostart ~/.config/lxsession/LXDE-pi/autostart.bak
